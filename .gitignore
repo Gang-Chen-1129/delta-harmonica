@@ -1,0 +1,10 @@
+**/bin/
+**/obj/
+dist/
+.DS_Store
+/songs/**
+!/songs/scale-example.txt
+/DeltaHarmonica/models/
+/DeltaHarmonica/Core/Mp3Transcriber.cs
+/third_party/
+/licenses/
