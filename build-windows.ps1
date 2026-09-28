@@ -15,11 +15,16 @@ Copy-Item (Join-Path $root 'README.md') $output
 Copy-Item (Join-Path $root '三角洲口琴-使用说明.md') $output
 Copy-Item (Join-Path $root 'LICENSE') $output
 $archive = Join-Path $root "dist/三角洲口琴-v$version-Windows-x64-便携版.zip"
+$githubArchive = Join-Path $root "dist/DeltaHarmonica-v$version-Windows-x64-portable.zip"
 Get-ChildItem (Join-Path $root 'dist') -Filter '三角洲口琴-v*-Windows-x64-便携版.zip' |
+    Remove-Item -Force
+Get-ChildItem (Join-Path $root 'dist') -Filter 'DeltaHarmonica-v*-Windows-x64-portable.zip' |
     Remove-Item -Force
 Get-ChildItem (Join-Path $root 'dist') -Filter 'DeltaHarmonica-v*-win-x64-portable.zip' |
     Remove-Item -Force
 Compress-Archive -Path $output -DestinationPath $archive -CompressionLevel Optimal
+Copy-Item $archive $githubArchive
 $hash = (Get-FileHash -Algorithm SHA256 $archive).Hash.ToLowerInvariant()
 Write-Host "已生成 $archive"
+Write-Host "GitHub 上传用文件：$githubArchive（发布时设置中文显示标签）"
 Write-Host "SHA-256: $hash"
