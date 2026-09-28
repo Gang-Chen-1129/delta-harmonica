@@ -3,7 +3,7 @@
 dist/
 .DS_Store
 /songs/**
-!/songs/scale-example.txt
+!/songs/音阶示例.txt
 /DeltaHarmonica/models/
 /DeltaHarmonica/Core/Mp3Transcriber.cs
 /third_party/

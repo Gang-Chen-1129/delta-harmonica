@@ -1,10 +1,10 @@
-# Delta Harmonica · Windows portable app
+# Delta Harmonica / 三角洲口琴 · Windows portable app
 
-English | [简体中文](README.zh-CN.md)
+English | [简体中文使用说明](三角洲口琴-使用说明.md)
 
 Delta Harmonica is a Windows 11 desktop app for organizing harmonica scores, importing MIDI melodies, and playing notes into the currently focused window through keyboard and mouse input. The portable package includes its .NET runtime; extract the whole archive and run `DeltaHarmonica.exe` without installing .NET or Python. The app's interface is currently in Chinese.
 
-**[Download the Windows x64 portable release](https://github.com/Gang-Chen-1129/delta-harmonica/releases/latest)** · [Release notes and SHA-256](RELEASES.md)
+**[Download the Windows x64 portable release](https://github.com/Gang-Chen-1129/delta-harmonica/releases/latest)** · [Release notes and SHA-256](三角洲口琴-发布记录.md)
 
 The executable is not code signed, so Windows SmartScreen may show an unknown publisher warning on first launch.
 
@@ -53,7 +53,7 @@ Install the .NET 10 SDK. In Windows PowerShell, run:
 ./build-windows.ps1
 ```
 
-The script publishes a self-contained Windows x64 build and creates `dist/DeltaHarmonica-v<version>-win-x64-portable.zip`. It bundles only the repository's scale example, even if you have imported other songs locally. WinForms can be cross-compiled on other systems with Windows targeting enabled, but running the app and sending input requires Windows. Core smoke tests can be run with `dotnet run --project tests/CoreSmoke/CoreSmoke.csproj`.
+The script publishes a self-contained Windows x64 build and creates `dist/三角洲口琴-v<version>-Windows-x64-便携版.zip`. It bundles only the repository's scale example, even if you have imported other songs locally. WinForms can be cross-compiled on other systems with Windows targeting enabled, but running the app and sending input requires Windows. Core smoke tests can be run with `dotnet run --project tests/CoreSmoke/CoreSmoke.csproj`.
 
 ## License
 
